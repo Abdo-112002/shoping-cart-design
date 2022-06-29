@@ -22,10 +22,13 @@
     }
 }
 
-@mixin bg-img($url) {
+@mixin bg-img($url,$fixed : false) {
     background: url($url) no-repeat;
     background-position: center;
     background-size: cover;
+    @if $fixed != false {
+        background-attachment: fixed;
+    }
 }
 
 @mixin overlay($z-index, $bg-color, $rgp) {
@@ -40,9 +43,9 @@
 
 ;
 // property prefixes
-@mixin prefixer($property, $value, $prefixes-list) {
-    @each $prefix in $prefixes {
-        #{'-' + $prefix + '-' + $property}: $value;
+@mixin prefixes($property, $value, $prefixes-list) {
+    @each $prefix in $prefixes-list {
+        -#{$prefix}-#{$property}: $value;
     }
     #{$property}:$value;
 }

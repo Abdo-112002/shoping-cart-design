@@ -1,0 +1,67 @@
+
+
+
+.header {
+    &__top-wrapper {
+        font-size: pxToRem(15);
+        background-color: $bgColor;
+        padding: pxToRem(8) 0px;
+
+        &__left {
+            display: flex;
+            align-items: center;
+            column-gap: pxToRem(48);
+        }
+        &__email {
+            position: relative;
+        }
+        &--email {
+            margin-left: pxToRem(10);
+            &::after {
+                content: '';
+                position: absolute;
+                top: 3px;
+                right: -27px;
+                width: 1px;
+                height: 20px;
+                background-color: $blackColor;
+                opacity: .2;
+            }
+        }
+
+        &__right {
+           @extend .row;
+           gap: 0px;
+            & > div {
+                border-right: 2px solid #C0C6CC;
+            }
+            & > div:last-child {
+                border-right: none;
+            }
+            &--social-icon {
+                padding: 0px 15px ;
+                i {
+                    padding: 5px;
+                    cursor: pointer;
+                }
+            }
+            &--language  {
+                text-transform: capitalize;
+                padding: 0px 15px ;
+                @extend .row;
+                gap: 10px;
+                cursor: pointer;
+                img {
+                    width: 25px;
+                }
+            }
+
+            &--login {
+                padding: 0px 15px ;
+                i {
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+}

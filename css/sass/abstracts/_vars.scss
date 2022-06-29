@@ -1,12 +1,13 @@
-$mainColor:#FF9900;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap');
+
+$mainColor: #A5D032;
+$bgColor : aliceblue;
 $secondColor:#DDDDE3;
 $darkColor:#131921;
-$third:#2C2C40;
 $whiteColor:#fff;
-$footerBg:#17CCC7;
-$center:center;
 $blackColor:#000;
-$prefixes-list: webkit,
-moz,
-o;
 $text-color : #898989;
+$main-font : 'Poppins', sans-serif ;
+$prefixes-list: (webkit , moz , o);
+
